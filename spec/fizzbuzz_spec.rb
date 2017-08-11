@@ -19,7 +19,15 @@ describe 'fizzbuzz' do
     expect(STDOUT).to receive(:puts).with('buzz')
     fizzbuzz([20])
 
-    expect(STDOUT).to receive(:puts).twice.with('buzz')
+    expect(STDOUT).to receive(:puts).with('buzz').twice
     fizzbuzz([10, 25])
+  end
+
+  it 'prints fizzbuzz if a number is divisible by three and five' do
+    expect(STDOUT).to receive(:puts).with('fizzbuzz')
+    fizzbuzz([15])
+
+    expect(STDOUT).to receive(:puts).with('fizzbuzz').twice
+    fizzbuzz([15, 30])
   end
 end
