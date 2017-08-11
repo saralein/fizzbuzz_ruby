@@ -30,4 +30,13 @@ describe 'fizzbuzz' do
     expect(STDOUT).to receive(:puts).with('fizzbuzz').twice
     fizzbuzz([15, 30])
   end
+
+  it 'prints the number if a number if not divisible by three or five' do
+    expect(STDOUT).to receive(:puts).with(22)
+    fizzbuzz([22])
+
+    expect(STDOUT).to receive(:puts).with(8)
+    expect(STDOUT).to receive(:puts).with(44)
+    fizzbuzz([8, 44])
+  end
 end
