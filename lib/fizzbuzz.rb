@@ -1,4 +1,3 @@
-#refactor
 def fizzbuzz(numbers)
   numbers.each do |number|
     output = ''
@@ -12,7 +11,6 @@ def fizzbuzz(numbers)
   end
 end
 
-# original
 def fizzbuzz_original(numbers)
   numbers.each do |number|
     if (number % 3 == 0 and number % 5 == 0)
@@ -26,3 +24,6 @@ def fizzbuzz_original(numbers)
     end
   end
 end
+
+number_range = (1...101).to_a
+fizzbuzz(number_range)
